@@ -2,25 +2,31 @@
 
     class TitleCaseGenerator
     {
-      function makeTitleCase($input_title)
-      {
-        $ignore_designated_words = array("a", "an", "the", "from", "to", "or", "my");
+        function makeTitleCase($input_title)
+        {
+            $ignore_designated_words = array("a", "an", "the", "from", "to", "or", "my");
+            $input_array_of_words = explode(" ", $input_title);
+            $output_titlecased = array();
 
-        $input_array_of_words = explode(" ", $input_title);
 
-        $output_titlecased = array();
-        foreach ($input_array_of_words as $word) {
+            foreach ($input_array_of_words as $current_word) {
+                if($current_word == $input_array_of_words[0]) {
 
-            if(in_array($word, $ignore_designated_words)) {
+                    array_push($output_titlecased, ucfirst($current_word));
 
-            array_push($output_titlecased, $word);
+                } else{
 
-            } else {
+                    if(in_array($current_word, $ignore_designated_words)) {
 
-                array_push($output_titlecased, ucfirst($word));
+                        array_push($output_titlecased, $current_word);
+
+                    } else {
+
+                        array_push($output_titlecased, ucfirst($current_word));
+                    }
+                }
             }
-
-            }
+        // $output_titlecased = strtoupper($output_titlecased);
         return implode(" ", $output_titlecased);
 
         }
