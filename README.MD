@@ -15,7 +15,7 @@ Enjoy.
 
 ##Technologies Used
 
-PHP, html, css, silex, PHPUnit
+PHP, html, css, silex, PHPUnit, Twig
 
 ###Legal
 
