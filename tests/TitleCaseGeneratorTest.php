@@ -62,7 +62,7 @@
 
         function test_makeTitleCase_firstDesignatedWords()
         {
-            //Arange
+            //Arrange
             $test_TitleCaseGenerator = new TitleCaseGenerator;
             $input = "from taco to taco";
 
@@ -71,6 +71,48 @@
 
             //Assert
             $this->assertEquals("From Taco to Taco", $result);
+        }
+
+        function test_makeTitleCase_nonCharacterWords()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "57 ways to eat a taco!!";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("57 Ways to Eat a Taco!!", $result);
+
+        }
+
+        function test_makeTitleCase_allCapsWords()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "TACOS AND MY SALSA";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("Tacos and my Salsa", $result);
+        }
+
+
+        function test_makeTitleCase_mixedCapsWords()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "from tAcO to buRRito";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("From Taco to Burrito", $result);
+            
         }
     }
 
