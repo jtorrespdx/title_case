@@ -4,7 +4,7 @@
     {
         function makeTitleCase($input_title)
         {
-            $ignore_designated_words = array("a", "an", "and", "the", "from", "to", "or", "my");
+                $ignore_designated_words = array("about", "above", "across", "after", "against", "along", "among", "around", "as", "at", "before", "behind", "below", "beneath", "beside", "between", "beyond", "but", "by", "down", "during", "for", "from", "inside", "into", "near", "of", "off", "on", "onto", "outside", "over", "past", "since", "than", "through", "to", "toward", "under", "until", "up", "upon", "with", "within", "without");
             $input_array_of_words = explode(" ", $input_title);
             $output_titlecased = array();
 
