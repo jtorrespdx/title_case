@@ -1,4 +1,11 @@
 
+-------------------------Zero Case--------------------------
+What it Does:
+It capitalizes the letter
+
+Input: i
+Output: I
+
 -------------------------First Case--------------------------
 What it Does:
 it capitalizes the first letter of a single word
@@ -17,8 +24,8 @@ Output: Crunchy Taco
 What it Does:
 it does not capitalize designated words (like prepositions, conjunctions, etc)
 
-Input: taco from mexico
-Output: Taco from Mexico
+Input: tacos from tijuana
+Output: Tacos from Tijuana
 
 -------------------------Fourth Case--------------------------
 What it Does:
