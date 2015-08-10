@@ -59,6 +59,19 @@
             //Assert
             $this->assertEquals("Tacos from Tijuana", $result);
         }
+
+        function test_makeTitleCase_firstDesignatedWords()
+        {
+            //Arange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "from taco to taco";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("From Taco to Taco", $result);
+        }
     }
 
 

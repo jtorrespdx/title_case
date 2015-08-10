@@ -29,10 +29,10 @@ Output: Tacos from Tijuana
 
 -------------------------Fourth Case--------------------------
 What it Does:
-It capitalizes designated words if the are the first word
+It capitalizes designated words if they are the first word
 
-Input: from taco to burrito
-Output: From Taco to Burrito
+Input: from taco to taco
+Output: From Taco to Taco
 
 -------------------------Fifth Case--------------------------
 What it Does:

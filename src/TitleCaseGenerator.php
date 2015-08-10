@@ -20,7 +20,7 @@
                 array_push($output_titlecased, ucfirst($word));
             }
 
-          }
+            }
         return implode(" ", $output_titlecased);
 
         }
